@@ -1,0 +1,98 @@
+
+ion-title {
+  text-align: center;
+}
+ion-slides {
+  height: 80%;
+
+  .slide-inner {
+      width: 80%;
+      color: rgb(0, 0, 0);
+      background-color: #ffffffbb;
+      border-radius: 10px;
+
+      ion-item {
+          --background: rgba(255, 255, 255, 0.2);
+          --border-radius: 10px;
+            color: rgb(133, 130, 130);
+          ion-input {
+              --color: rgb(0, 0, 0);
+          }
+      }
+  }
+}
+ion-slides {
+  height: 100%;
+
+
+  .title {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-style: Arial;
+    margin-top: 20px;
+
+  }
+}
+ion-footer{
+    display: block;
+    text-decoration: none;
+    justify-content: center;
+}
+ion-slide{
+  height: 100%;
+  .session{
+    border-radius: 10%;
+  }
+}
+.ion-margin-top {
+  color: #020101;
+  text-decoration: none;
+}
+p .title2 {
+  margin-top: 20px;
+}
+.digitacao {
+  width: 100%;
+  animation: digitacao 3.5s steps(40),
+  cursor .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: small;
+}
+
+.messagem {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: small;
+}
+
+@keyframes digitacao {
+    from {
+      width: 0;
+    }
+}
+@keyframes cursor {
+  50% {
+    border-color: transparent
+  }
+}
+ion-content .here {
+  height: 100%;
+  margin-top: 20px;
+}
+ion-title img {
+  height: 120px;
+  width: 300px;
+}
+#scroll {
+  height:100%;
+  overflow:scroll;
+}
+#box {
+  margin-top: 20px;
+}
+#btn {
+  color: #020101;
+  text-decoration: none;
+}

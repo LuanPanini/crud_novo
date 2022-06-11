@@ -1,0 +1,62 @@
+
+<ion-header>
+  <ion-title>
+    <img src="assets/img/Logo Help.me-01.png"/>
+  </ion-title>
+</ion-header>
+
+<ion-content id="box">
+
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-button slot="end" (click)="fecharModal()">Fechar</ion-button>
+    <ion-title>{{atualizar ? 'Atualizar Cliente' : 'Novo Cliente'}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<form #f="ngForm"(ngSubmit)="enviando(f)">
+
+  <ion-item class="ion-margin-top">
+    <ion-label position="floating" required>Nome</ion-label>
+    <ion-input type="text" [(ngModel)]="dados.nome" name="nome"></ion-input>
+  </ion-item>
+
+  <ion-item class="ion-margin-top">
+    <ion-label position="floating" required>Digite o CPF / CNPJ</ion-label>
+    <ion-input [(ngModel)]="dados.cpf" name="cpf"></ion-input>
+
+  </ion-item>
+
+  <ion-item class="ion-margin-top">
+    <ion-label>Data de nascmento:</ion-label>
+    <ion-input type="date" [(ngModel)]="dados.nasc" name="nasc"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Cidade</ion-label>
+    <ion-input [(ngModel)]="dados.cidade" name="cidade"></ion-input>
+  </ion-item>
+    <ion-item>
+
+
+      <ion-item class="ion-margin-top">
+        <ion-label>Qual seu trabalho de interesse:</ion-label>
+        <ion-input type="text" [(ngModel)]="dados.interesse" name="interesse"></ion-input>
+      </ion-item>
+
+
+
+      <ion-label position="floating">Email</ion-label>
+      <ion-input [(ngModel)]="dados.email" name="email"></ion-input>
+    </ion-item>
+
+    <ion-item class="ion-margin-top">
+      <ion-label position="floating" required>Senha</ion-label>
+      <ion-input type="password" [(ngModel)]="dados.senha" name="senha"></ion-input>
+
+    </ion-item>
+
+  <ion-button fill="outline" expand="block" type="submit">{{atualizar ? 'Atualizar Cliente' : 'Novo Cliente'}}</ion-button>
+</form>
+</ion-content>
